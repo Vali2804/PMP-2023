@@ -13,7 +13,7 @@ plt.hist(timpi_medii_asteptare, bins=20, density=True, alpha=0.6, color='g')
 plt.show()
 
 # sub 2 - 2
-import pymc3 as pm
+import pymc as pm
 
 # Definirea modelului
 model = pm.Model()
@@ -47,6 +47,6 @@ with model:
 # Vizualizare dist. a posteriori pentru parametrul u
 pm.plot_posterior(trace, var_names=['prior_u'], figsize=(10, 6))
 plt.title("Distribuția a posteriori pentru u")
-pm.plot_posterior(trace, var_names=['prior_u'], figsize=(10, 6))
-plt.title("Distribuția a posteriori pentru u")
+pm.plot_posterior(trace, var_names=['prior_o'], figsize=(10, 6))
+plt.title("Distribuția a posteriori pentru o")
 plt.show()
